@@ -1,12 +1,376 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <style>
+body{
+    margin:0px;
+    font-family: "Montserrat"; 
+  }
+  .switch{
+    display:none
+  }
+  
+  #women{margin-top:200px}
+  
+  @media (min-width:847px) {
+    #mountain,#women{display:block !important;}
+    
+  }
+  #nav{
+    display:flex;
+   position: sticky;
+   top:0;
+    
+    background:rgb(217 217 217) ;
+  }
+  
+  
+  .tab{
+    background-color: rgb(217 217 217);
+    display: flex;
+    width:267px;
+    height:73px;
+   font-size: 22px;
+   line-height: 33px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-family: "Montserrat";
+    border-top-left-radius:20px;
+    border-top-right-radius:20px;
+  }
+  
+  a{color:black;text-decoration: none;}
+  
+  .tab:hover{
+    background-color: white;
+  }
+  img{
+    width:358px;
+    height:232px;
+    margin-top:40px;
+  }
+  .imageteg{
+    display:flex;
+   
+  }
+  .h1{
+    margin-left: 71px;
+    width:50%;
+   font-size: 26px;
+  
+    font-family: "Montserrat";
+    font-weight: 700;
+    
+  }
+  .h1 p{font-weight: 400;font-size: 16px;
+  line-height: 24px;
+  font-family: "Montserrat";
+  }
+  hr{width:90%}
+  .ul{margin-left: 37px;}
+  .ul p{margin-left: 22px;font-size: 18px;font-weight: 500;}
+  ol{ columns: 2;
+  width: 70%;
+  
+  }
+  
+  ol.li{
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .olmount li{
+    line-height: 50px!important
+  }
+  .olwomen{
+   
+        counter-reset: item;
+        list-style-type: none;
+     
+  }
+  li img{
+    height: 14px;
+    width: 14px;
+  }
+  
+  
+  .bottom{
+    margin-left: 60px;
+    
+  }
+  h3{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+  }
+  input{
+    width:351px;
+    height:52px;
+    padding-left: 16px;
+    border-radius: 16px;
+    border: 1px solid rgba(217, 217, 217, 1) ;
+  }
+  .add{background: rgb(57 34 197);
+  width:128px;
+  height:52px;
+  border-radius: 16px;
+  margin-left: 24px;
+  border:none;
+  font-weight: 400;
+  font-size: 16px;
+  color:white;
+  
+  }
+  .shadow{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width:726px;
+    height:112px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px 0px rgba(12, 12, 12, 0.1);
+    display:flex;
+    align-items: center;
+  
+  }
+  
+  .ok{
+    margin-left:36px;
+    width:92px;
+    height:52px;
+    border-radius:16px ;
+    background: rgb(57 34 197);
+    color:white;
+    border: none;
+    font-weight: 400;
+    font-size: 16px;
+  
+  }
+  .cancel{
+    
+    width:92px;
+    height:52px;
+    border-radius:16px ;
+    background: white;
+    font-weight: 400;
+    font-size: 16px;
+    border: none;
+    cursor: hand;
+  }
+  .cancel:hover{
+    background: black;
+    color:white;
+  
+  }
+  @media(max-width:846px){
+    #mountain{display:block}
+  #women{display:none;margin-top: 10px;}
+  .switch{display:flex;
+   
+    
+  width:100%;
+  height: 73px;
+  justify-content:space-between;
+  align-items:center;
+  font-size: 20px;
+  font-weight: 500;
+  
+  border-radius: 20px 20px 0px 0px;
+  
+  }
+  
+    .imgmountain{
+      margin-left: 5%;
+      margin-right: 5%;
+      width:90%;
+      height:auto;
+      content:url('https://sergioignatev.github.io/gitImages/bicicle3.png')}
+  
+      #imgwomen{content:url('https://sergioignatev.github.io/gitImages/bicicle4.png')}
+        
+       
+    .tab{display: none;}
+    .imageteg{flex-direction: column;}
+    .h1{width:90%;
+    margin-left:5%;
+    margin-right: 5%;
+    font-size:26px ;
+    }
+    .h1 p{
+        font-size:14px ;
+    }
+    ol{
+      margin-left: 0%;
+      columns: 1;
+    }
+    .ul{margin-left:0%;}
+    .ul p{font-size: 16px;
+   
+    }
+    .ul li{
+  font-size: 14px;
+  line-height: 21px;
+  
+    }
+    .bottom{margin-left: 5%;
+    margin-right:5%;}
+    input{
+      width:95%;
+    
+    }
+    .add{width:100%;margin-left: 0px;
+    margin-top: 15px;
+  font-size: 14px;
+  }
+  .cancel{font-size: 14px;width:100%;margin-right: 20px;}
+  .ok{font-size: 14px;margin-left: 20px;width:100%;}
+    .shadow{
+      width:100%;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+    </style>
+  <title>Велосипеды Тест</title>
+  <meta charset="utf-8">
+  <link rel="icon" type="image/x-icon" href="https://sergioignatev.github.io/gitImages/bicicle3.png">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"" crossorigin="anonymous"></script>
+ 
+</head>
 <body>
-    <h2>PHP TEST</h2>
-    <a href="index.php">PHPp</a>
-<h1>
-<?php
-echo "My first PHP script!";
-?> 
-</h1>
+<div id="nav">
+    <a href="#"><div class="tab">Горный велосипед</div></a>
+    <a href="#w"><div class="tab">Женский велосипед</div></a>
+</div>
+<div class="switch" onclick="mSW()"><div style="margin-left: 5%;">Горный Велосипед </div><i  style="margin-right:5% ;font-size:18px" class="fa fa-angle-up" aria-hidden="true"></i></div>
+    <div id="mountain">
+        <div class="imageteg">
+           
+            <img class="imgmountain" src="https://sergioignatev.github.io/gitImages/bicicle1.png"/>
+            <div class="h1"><h1>Велосипед STELS Navigator 510 HD 26 2022</h1>
+            <p>Данный велосипед с колесами 26 дюймов хорошо подходит высоким подросткам. Прогиб рамы и небольшой размер рамы расчитан на рост от 135 до 165 см.</p>
+            <p>Суммарный вес велосипеда был снижен до 16,9 кг, так как рама была изготовлена с учетом использования велосипеда подростками.</p>
+            </div>
+        </div>
+        <hr></hr>
+        <div class="ul">
+            <p>Характеристики</p>
+            <ol class="olmount">
+                <li>Двойной обод</li>
+                <li>Алюминиевый сплав</li>
+                <li>Колеса диаметром 26 дюймов</li>
+                <li>Покрышки 26х1,95"</li>
+            </ol>
+        </div>
+        <div class="bottom">
+            <h3>Добавить характеристику</h3>
+               <input placeholder="Введите текст и нажмите Добавить"></input>
+           <button class="add">Добавить</button>
+             <div class="shadow">
+                    <button  onclick="Alert(event)"class="ok">Окей</button>
+             <button id="w" onclick="Alert(event)" class="cancel">Отмена</button>
+             </div>
+
+
+        </div>
+            </div>
+
+            <div  class="switch" onclick="wSW()"><div style="margin-left: 5%;">Женский велосипед </div><i style="margin-right:5% ;font-size:18px" class="fa fa-angle-down" aria-hidden="true"></i></div>
+            <div id="women">
+                <div class="imageteg">
+                    <img class="imgmountain"id="imgwomen" src="https://sergioignatev.github.io/gitImages/bicicle2.png"/>
+                    <div class="h1"><h1>Велосипед SCHWINN Traveler women 2022</h1>
+                    <p>Женский велосипед со стальной рамой Classic step-true lightweight позволяет девушкам без проблем его перемещать.</p>
+                    <p>На данном велосипеде имеется 7 скоростей с переключателями от Shimano, а жесткая вилка обеспечивает отличную управляемость. Подходит для катания по асфальтированным поверхностям.</p>
+                    </div>
+                </div>
+                <hr></hr>
+                <div class="ul">
+                    <p>Характеристики</p>
+                    <ol class="olwomen">
+                        <li><img src="pics/Vector.png"/> Стальная рама</li>
+                        <li><img src="pics/Vector.png"/> Жесткая вилка</li>
+                        <li><img src="pics/Vector.png"/> Колеса диаметром 24 дюймов</li>
+                        <li><img src="pics/Vector.png"/> 7 скоростей</li>
+                    </ol>
+                </div>
+                <div class="bottom">
+                    <h3>Добавить характеристику</h3>
+                       <input placeholder="Введите текст и нажмите Добавить"></input>
+                   <button class="add">Добавить</button>
+                     <div class="shadow">
+                            <button onclick="Alert(event)" class="ok">Окей</button>
+                     <button onclick="Alert(event)" class="cancel">Отмена</button>
+                     </div>
+        
+        
+                </div>
+                    </div>
+
 </body>
+<script >
+function mSW(){
+    
+    let mount=document.getElementById("mountain")
+    if(mount.style.display=="none"){
+        mount.style.display="block";
+        document.querySelector('i').classList.remove("fa-angle-down")
+        document.querySelector('i').classList.add("fa-angle-up")
+    }else{
+        mount.style.display="none";
+        document.querySelector('i').classList.add("fa-angle-down")
+        document.querySelector('i').classList.remove("fa-angle-up")
+    }
+}
+
+function wSW(){
+    
+    let mount=document.getElementById("women")
+    if(mount.style.display=="block"){
+        mount.style.display="none";
+        document.getElementsByClassName("fa")[1].classList.add("fa-angle-down")
+        document.getElementsByClassName("fa")[1].classList.remove("fa-angle-up")
+        
+    }else{
+        mount.style.display="block";
+        document.getElementsByClassName("fa")[1].classList.add("fa-angle-up")
+        document.getElementsByClassName("fa")[1].classList.remove("fa-angle-down");
+       
+    }
+}
+document.getElementsByClassName("add")[0].addEventListener('click',Add)
+function Add(){
+    let inp=document.getElementsByTagName('input')[0].value;
+    document.getElementsByTagName('input')[0].value=""
+    if(inp!=""){document.getElementsByTagName('ol')[0].innerHTML+=`<li>${inp}</li>`}
+}
+
+document.getElementsByClassName("add")[1].addEventListener('click',Add2)
+function Add2(){
+    let inp=document.getElementsByTagName('input')[1].value;
+    document.getElementsByTagName('input')[1].value=""
+   if(inp!="") {document.getElementsByTagName('ol')[1].innerHTML+=`<li><img src="pics/Vector.png"/> ${inp}</li>`}
+}
+document.getElementsByClassName('tab')[0].style.background="white"
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+    var h=document.getElementById('mountain').offsetHeight-100
+    if (document.body.scrollTop > h || document.documentElement.scrollTop > h) {
+      document.getElementsByClassName("tab")[0].style.background = " rgb(217 217 217)";
+      document.getElementsByClassName("tab")[1].style.background = "white";
+    } else {
+        document.getElementsByClassName("tab")[1].style.background = " rgb(217 217 217)";
+        document.getElementsByClassName("tab")[0].style.background = "white";
+    }
+  }
+ function Alert(event){
+    alert (`Вы нажали ${event.target.innerHTML} кнопку`)
+ }
+
+</script>
 </html>
